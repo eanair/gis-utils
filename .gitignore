@@ -1,0 +1,22 @@
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# PnP 관련 파일
+.pnp.*
+
+# VSCode 관련 파일
+.vscode/
+
+# Yarn 관련 파일
+.yarn/
+.yarnrc.yml
+
+# 노드 모듈 파일
+node_modules/
+
+# 빌드 관련 파일
+dist/

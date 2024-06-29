@@ -1,0 +1,41 @@
+{
+  "name": "@eanair/gis-utils",
+  "version": "0.1.6",
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "author": "eanair",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.9",
+    "@yarnpkg/pnpify": "^4.1.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.5",
+    "typescript": "^5.5.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "tsc": "yarn pnpify tsc",
+    "build": "tsc && rsync -a src/ dist/src/ --include='*/' --include='*.wasm' --exclude='*'",
+    "test": "jest --config jest.config.js",
+    "prepublishOnly": "yarn test && yarn build"
+  },
+  "packageManager": "yarn@4.3.1"
+}
