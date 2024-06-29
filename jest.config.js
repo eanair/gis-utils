@@ -13,6 +13,5 @@ module.exports = {
   },
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
-    "^math1$": "<rootDir>/src/math/math1.js",
   },
 };
