@@ -1,6 +1,7 @@
 {
   "name": "@eanair/gis-utils",
-  "version": "0.1.8",
+  "version": "0.1.10",
+  "description": "A library of utilities for GIS-based computations",
   "source": "./src/index.ts",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -33,7 +34,7 @@
   ],
   "scripts": {
     "tsc": "yarn pnpify tsc",
-    "build": "tsc && rsync -a src/ dist/src/ --include='*/' --include='*.wasm' --exclude='*'",
+    "build": "tsc && rsync -a src/ dist/ --include='*/' --include='*.wasm' --exclude='*'",
     "test": "jest --config jest.config.js",
     "prepublishOnly": "yarn test && yarn build"
   },

@@ -1,1 +1,1 @@
-export * from "./math/vector/getAngleBetweenVectors3DAsync";
+export { getAngleBetweenVectors3D, getAngleBetweenVectors3DAsync } from "./math";

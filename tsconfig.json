@@ -13,6 +13,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src", "tests", "src/index.ts"],
-  "exclude": [".yarn", ".pnp.*", "node_modules"]
+  "include": ["src", "src/index.ts"],
+  "exclude": [".yarn", ".pnp.*", "node_modules", "tests"]
 }
